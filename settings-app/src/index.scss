@@ -1,0 +1,400 @@
+$jse_background: #F6F5F0;
+$jse_dark_background1: #F0EEEA;
+$jse_dark_background2: #E8E5E0;
+$jse_dark_background3: #D1CDC7;
+$jse_border_lite: #a09984; 
+$jse_text_lite: #554f3d; 
+$jse_text: #23282D;
+$jse_gray: #cdcdcb;
+$jse_gold: #C49700;
+$jse_green: #87C019;
+$jse_orange: #EE5D00;
+$jse_red: #ee3800dc;
+$jse_blue: #0044F9;
+$jse_light_blue: #62CDF9;
+$jse_link_blue: #2271B1;
+$jse_white: #F7F7F7;
+
+/* 
+    
+    Contact Form 7
+    Gravity Forms
+    Formidable Forms
+
+*/
+
+#jse-connect-plugin-app {
+
+  /* Hide All Wordpress Notices */
+  .notice {
+    display: none;
+  }
+
+  max-width: 960px;
+  position: relative;
+  .jse-fade {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .jse-activate-input {
+    display: block;
+    margin-right: 4px;
+    float: right;
+  }
+  .jse-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+  }
+  .jse-switch-label {
+    font-weight: bold;
+    padding: 4px;
+    top: 2px;
+    position: relative;
+    margin-left: 16px;
+  }
+  .jse-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &:before {
+        position: absolute;
+        content: "";
+        height: 17px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+  }
+  input:checked + .jse-slider {
+    background-color: $jse_green
+  }
+  input:focus + .jse-slider {
+    box-shadow: 0 0 1px $jse_green
+  }
+
+  input:checked + .jse-slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .jse-list-selection-label {
+    font-size: 18px;
+    margin-bottom: 16px;
+    margin-top: 18px;
+    >span.bold {
+      font-weight: bold;
+    }
+  }
+
+.jse-header {
+  display:flex;
+  align-items: center;
+  justify-content: left;
+  font-family: hawking, Helvetica, Arial, sans-serif;
+  position: relative;
+  height: 58px;
+  text-align: left;
+  background-color: $jse_dark_background3;
+  border-radius: 6px;
+  img {
+    display: inline-block;
+    height: 32px;
+    padding: 14px;
+  }
+  h1 {
+    display: inline-block;
+    > span {
+      font-size: 60%;
+      position: relative;
+      top: -6px;
+    }
+  }
+  .jse-breadcrumb {
+    font-size: 14px;
+    margin-left: 68px;
+    .jse-first {
+      color: $jse_link_blue;
+    }
+    .jse-divider {
+      margin-right: 6px;
+      margin-left: 6px;
+      color: $jse_text;
+    }
+  }
+}
+table {
+  &.jse-list-selection {
+    border-bottom: 0px solid $jse_text;
+  }
+  &.jse-field-mapping {
+    border-top: 1px dashed $jse_text;
+    border-spacing: 8px;
+  }
+  color: $jse_text;
+  border-spacing: 0 16px;
+  width: 100%;
+  thead, tr.thead {
+    height: 38px;
+    td {
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: 1px solid #666;
+      padding-bottom: 12px;
+      padding-top: 18px;
+    }
+  }
+  tr.form-head {
+    height: 36px;
+    td {
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: none;
+      padding-bottom: 6px;
+    }
+  }
+  tr.field-head {
+    height: 36px;
+    td {
+      font-size: 14px;
+      font-weight: bold;
+      color: #595959;
+      border-bottom: 1px solid #999;
+      padding-bottom: 6px;
+    }
+  }
+  tbody {
+    td {
+      font-size: 14px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 12px;
+      &.yes {
+        color: $jse_green;
+        font-weight: bold;
+      }
+      &.no {
+        color: $jse_text;
+        font-weight: bold;
+      }
+      &.bb {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+}
+tr.jse-bb > td {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+}
+.jse-information {
+  padding: 4px;
+  h1, h2, h3 {
+    font-weight: 600;
+  }
+  p {
+    font-size: medium;
+  }
+}
+.jse-connect-status, #jse-settings-form {
+  border-bottom: 1px dashed #555;
+  margin-top: 12px;
+  padding: 4px 4px 18px 4px;
+  .green {
+    color: $jse_green;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+#jse-settings-form {
+  border: none;
+  margin-top: 8px;
+}
+.jse-button {
+  width: auto;
+  min-width: 100px;
+  line-height: 1.0 !important;
+  min-height: 20px !important;
+  border-radius: 6px !important;
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  background-color: #000 !important;
+  padding: 10px 17px 12px 17px !important;
+  border-radius: 3px !important;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+  &.jse-small {
+    min-width: 80px;
+    min-height: 16px;
+    font-size: 14px !important;
+  }
+  &.jse-left {
+    float: right;
+    position: relative;
+    bottom: 48px;
+  }
+  &.jse-mini {
+    min-width: 68px;
+    min-height: 16px;
+    font-size: 14px !important;
+    padding: 6px 12px 8px 12px !important;
+  }
+}
+.jse-block {
+    min-height: 12px;
+    background-color: #f1f0f0;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    &.available {
+        border-radius: 6px;
+    }
+    .jse-form-name {
+      display: inline-block;
+      margin-right: 16px;
+      font-weight: bold;
+      font-size: 1.3em;
+      vertical-align: middle;
+      min-width: 190px;
+    }
+    .jse-form-config {
+      margin-bottom: 32px;
+    }
+    .jse-field-name {
+      display: inline-block;
+      margin-right: 16px;
+      font-weight: normal;
+      font-size: 1.1em;
+      vertical-align: middle;
+      min-width: 190px;
+      >.slug {
+        font-size: 90%;
+        vertical-align: super;
+      }
+    }
+    .jse-text-box {
+      padding: 5px 14px;
+      color: #554f3d;
+      font-size: 14px;
+      background-color: #e8e5e0;
+      border: 2px solid #d1cdc7;
+    }
+    .jse-arrow {
+      display: inline-block;
+      width: 1.6em;
+      vertical-align: middle;
+      line-height: 0;
+      margin-right: 16px;
+    }
+    .jse-list-selection {
+      select {
+        border-color: $jse_background;
+        font-weight: normal;
+      }
+    }
+    .jse-field-mapping {
+      border-color: $jse_gray;
+      select {
+        border-color: $jse_gray;
+      }
+    }
+    .jse-error-float {
+      position: absolute;
+      right: 24px;
+      top: 0px;
+    }
+    .jse-error {
+      color: $jse_red;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 2.1em;
+      border: 1px dashed black;
+      padding: 6px;
+    }
+    .jse-field-mapping {
+      margin-top: 18px;
+      >.jse-form-field-name {
+        margin-bottom: 8px;
+        >span.type {
+          font-size: 90%;
+          vertical-align: super;
+        }
+      }
+      select {
+        border-color: $jse_gray;
+      }
+    }
+}
+#jse-settings-form {
+  margin-top: 16px;
+  p {
+      margin-bottom: 6px;
+      margin-top: 8px;
+  }
+  .submit-area .button.button-primary {
+    padding: 4px 17px 4px 17px !important;
+    border-radius: 3px !important;
+    font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}
+.jse-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  margin-top: 20px;
+}
+.green-check {
+    color: #1f55b6;
+    background: #b3d4fc;
+    border: 2px solid darkgray;
+}
+input#sendy-list-id {
+    min-width: 260px;
+    font-size: 14px;
+    padding: 6px 10px;
+    margin: 1px;
+    margin-left: 16px;
+}
+.warning {
+    color: $jse_red;
+    font-weight: bold;
+}
+.message-area {
+    margin-top: 14px;
+    min-height: 40px;
+    min-width: 300px;
+    >span {
+        display: block;
+        margin-bottom: 6px;
+    }
+}
+}

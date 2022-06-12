@@ -1,0 +1,63 @@
+@font-face {
+	font-family: 'hawking';
+	src: url('https://justsend.email/fonts/Hawking.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking.woff') format('woff');
+	font-display: auto;
+}
+.hawking{font-family: 'hawking' !important;}
+
+@font-face {
+	font-family: 'hawking-italic';
+	src: url('https://justsend.email/fonts/Hawking-Italic.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking-Italic.woff') format('woff');
+	font-display: auto;
+}
+.hawking-italic{font-family: 'hawking-italic' !important;}
+
+@font-face {
+	font-family: 'hawking-light';
+	src: url('https://justsend.email/fonts/Hawking-Light.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking-Light.woff') format('woff');
+	font-display: auto;
+}
+.hawking-light{font-family: 'hawking-light' !important;}
+
+@font-face {
+	font-family: 'hawking-light-italic';
+	src: url('https://justsend.email/fonts/Hawking-Light-Italic.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking-Light-Italic.woff') format('woff');
+	font-display: auto;
+}
+.hawking-light-italic{font-family: 'hawking-light-italic' !important;}
+
+@font-face {
+	font-family: 'hawking-xbold';
+	src: url('https://justsend.email/fonts/Hawking-XBold.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking-XBold.woff') format('woff');
+	font-display: auto;
+}
+.hawking-xbold{font-family: 'hawking-xbold' !important;}
+
+@font-face {
+	font-family: 'hawking-xbold-italic';
+	src: url('https://justsend.email/fonts/Hawking-XBold-Italic.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking-XBold-Italic.woff') format('woff');
+	font-display: auto;
+}
+.hawking-xbold-italic{font-family: 'hawking-xbold-italic' !important;}
+
+@font-face {
+	font-family: 'hawking-bold';
+	src: url('https://justsend.email/fonts/Hawking-Bold.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking-Bold.woff') format('woff');
+	font-display: auto;
+}
+.hawking-bold{font-family: 'hawking-bold' !important;}
+
+@font-face {
+	font-family: 'hawking-bold-italic';
+	src: url('https://justsend.email/fonts/Hawking-Bold-Italic.woff2') format('woff2'),
+	url('https://justsend.email/fonts/Hawking-Bold-Italic.woff') format('woff');
+	font-display: auto;
+}
+.hawking-bold-italic{font-family: 'hawking-bold-italic' !important;}
