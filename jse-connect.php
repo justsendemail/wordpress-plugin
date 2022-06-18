@@ -31,15 +31,8 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'JSECNCT_VERSION', '1.0.0' );
 include_once(ABSPATH.'wp-admin/includes/plugin.php');
 
+// ..... Production OAuth2 SSO for JustSend.Email ..... 
 define( 'JSECNCT_IDP_URL', 'https://login.justsend.email');
-
-// .... DEV Setup .... 
-// define( 'JSECNCT_DEV_MODE', true);
-// define( 'JSECNCT_CLIENT_ID', '491b2fcc-6cab-41d6-8d02-0c8a0fe22e58');
-// define( 'JSECNCT_APP_URL', 'https://dev.justsend.email');
-// define( 'JSECNCT_API_URL', 'http://localhost:8081/api/');
-
-// ..... Prod Setup ..... 
 define( 'JSECNCT_DEV_MODE', false);
 define( 'JSECNCT_CLIENT_ID', '1616f96b-9962-4934-8922-0254a03880b6');
 define( 'JSECNCT_APP_URL', 'https://app.justsend.email');

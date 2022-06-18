@@ -15,5 +15,6 @@ zip -r just-send-email-connect-$1.zip just-send-email-connect/ \
   -x '*/settings-app/data/*' \
   -x '*/.gitignore' \
   -x '*/.git/*' \
-  -x '*build-zip.sh*'
+  -x '*build-zip.sh*' \
+  -x '*dev-setup.txt*'
 

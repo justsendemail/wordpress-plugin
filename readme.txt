@@ -9,17 +9,31 @@ Requires PHP: 7.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A WordPress plugin that securely integrates other supported WordPress plugins with JustSend.Email lists.
+A WordPress plugin that securely integrates other supported WordPress plugins with JustSend.Email
 
 == Description ==
 
 This WordPress plugin securely connects to an existing JustSend.Email account and integrates
-other supported WordPress plugins with JustSend.Email lists. Currently, these other
-WordPress plugins are supported:
+supported WordPress plugins with JustSend.Email list features.
+
+Currently, these WordPress plugins are supported:
 
 * Ameila Booking
 * Forminator Forms
 * WooCommerce
+
+= What you can do with JustSend.Email + WordPress =
+
+* Add a client to a JustSend.Email list when an appointment is Booked in AmeilaBooking.
+* Add a vistor to a JustSend.Email list when they submit a forminator form.
+* Add a customer to a JustSend.Email list when a user completes a WooComerce order.
+
+= How to get started =
+
+* [Sign up for JustSend.Email](https://justsend.email/#sign-up) 
+  - Signing up for an account and building lists is free. However, you'll need to provide a payment method to send emails.
+* Log into [JustSend.Email](https://app.justsend.email) and create a list ( or two! )
+* Install the plugin, then connect your JustSend.Email account with our Single Sign-On so the plugin can add contacts to your lists.
 
 == Frequently Asked Questions ==
 
