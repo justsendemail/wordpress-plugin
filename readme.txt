@@ -9,14 +9,13 @@ Requires PHP: 7.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A WordPress plugin that securely integrates other supported WordPress plugins with JustSend.Email
+Securely move data from leading WordPress plugins into JustSend.Email lists.
 
 == Description ==
 
-This WordPress plugin securely connects to an existing JustSend.Email account and integrates
-supported WordPress plugins with JustSend.Email list features.
+The JustSend.Email WordPress Plugin makes it super-easy to move data from leading WordPress plugins into JustSend.Email lists.
 
-Currently, these WordPress plugins are supported:
+These WordPress plugins are currently supported:
 
 * Ameila Booking
 * Forminator Forms
@@ -25,27 +24,32 @@ Currently, these WordPress plugins are supported:
 = What you can do with JustSend.Email + WordPress =
 
 * Add a client to a JustSend.Email list when an appointment is Booked in AmeilaBooking.
-* Add a vistor to a JustSend.Email list when they submit a forminator form.
-* Add a customer to a JustSend.Email list when a user completes a WooComerce order.
+* Add a visitor to a JustSend.Email list when they submit a forminator form.
+* Add a customer to a JustSend.Email list when a they complete a WooComerce order.
 
 = How to get started =
 
 * [Sign up for JustSend.Email](https://justsend.email/#sign-up) 
-  - Signing up for an account and building lists is free. However, you'll need to provide a payment method to send emails.
-* Log into [JustSend.Email](https://app.justsend.email) and create a list ( or two! )
-* Install the plugin, then connect your JustSend.Email account with our Single Sign-On so the plugin can add contacts to your lists.
+  - Signing up for an account and adding contacts to a list(s) is free. However, a valid payment method is required on an account to send emails.
+* Log into [JustSend.Email](https://app.justsend.email) and create a list ( or multiple lists! )
+  - Checkout the [Get Started Tutorial](https://justsend.email/get-started-with-justsend-email/)
+* Install the plugin (on a WordPress website), then connect to a JustSend.Email account. The plugin uses a secure Single Sign-On connection to move data from supported plugins into lists in a JustSend.Email account.
+
+= How it connects =
+
+The JustSend.Email Wordpress plugin connects to a JustSend.Email account using industry standard OAuth2 authorization. When the "Connect" button is pressed on the plugin settings page, a new browser window opens and prompts the user to enter their JustSend.Email account login credentials. The login request can be verified and authenticated by checking and confirming that **login.justsend.email** is the domain in the browser window.
+
+For technical details on the JustSend.Email API visit the [API Documentation](https://justsend.email/api-documentation/) page.
 
 == Frequently Asked Questions ==
 
 = Is a JustSend.Email account required to use the plugin? =
 
-Yes. The plugin connects to your JustSend.Email account.
+Yes. The plugin must connect to an active JustSend.Email account.
 
-= When will an integration be available for Plugin XXXXXX? =
+= When will more plugins be supported? =
 
-New Plugin integrations will be released quarterly. Please contact
-us and tell us about a plugin you want added.
-Contact us here: https://justsend.email/contact
+Quarterly releases are planned for New Plugin integrations. Please [contact us](https://justsend.email/contact/) and tell us about a plugin you want supported. Contact us here: https://justsend.email/contact
 
 == Screenshots ==
 
@@ -56,9 +60,9 @@ Contact us here: https://justsend.email/contact
 == Changelog ==
 
 = 1.0.0 =
-* First release of the JustSend.Email Connect plugin with support for these other WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.
+* First release of the JustSend.Email WordPress plugin with support for these WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.
 
 == Upgrade Notice ==
 
 = 1.0.0 =
-* First release of the JustSend.Email Connect plugin with support for these other WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.
+* First release of the JustSend.Email WordPress plugin with support for these WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.
