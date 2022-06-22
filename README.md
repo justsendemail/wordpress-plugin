@@ -48,7 +48,7 @@ For technical details on the JustSend.Email API visit the [API Documentation](ht
 
   Yes. The plugin must connect to an active JustSend.Email account.
 
-#### When will more plugins be supported?
+#### When will more plugins be supported? =
 
 Quarterly releases are planned for New Plugin integrations. Please [contact us](https://justsend.email/contact/) and tell us about a plugin you want supported. Contact us here: https://justsend.email/contact
 
