@@ -99,7 +99,7 @@ class JSECNCT_Menu {
       $this->enqueue_assets();
       ?>
       <div class="wrap">
-        <div id="jse-connect-plugin-app" data-page="<?= $page ?>" data-prefix="jsecnct"></div>
+        <div id="jse-connect-plugin-app" data-page="<?php echo $page ?>" data-prefix="jsecnct"></div>
       </div>
       <div class="wrap"></div>
       <?php
