@@ -41,6 +41,9 @@ The JustSend.Email Wordpress plugin connects to a JustSend.Email account using i
 
 For technical details on the JustSend.Email API visit the [API Documentation](https://justsend.email/api-documentation/) page.
 
+Be sure to refer to our [Terms of Use](https://justsend.email/terms) and [Privacy Policy](https://justsend.email/privacy) for further details.
+
+
 == Frequently Asked Questions ==
 
 = Is a JustSend.Email account required to use the plugin? =
