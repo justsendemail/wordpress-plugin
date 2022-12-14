@@ -3,7 +3,7 @@ $jse_dark_background1: #F0EEEA;
 $jse_dark_background2: #E8E5E0;
 $jse_dark_background3: #D1CDC7;
 $jse_border_lite: #a09984; 
-$jse_text_lite: #554f3d; 
+$jse_text_lite: #7c746b;
 $jse_text: #23282D;
 $jse_gray: #cdcdcb;
 $jse_gold: #C49700;
@@ -139,6 +139,12 @@ $jse_white: #F7F7F7;
     }
   }
 }
+.jse-footer {
+  color: $jse_text_lite;
+  >div {
+    margin-bottom: 8px;
+  }
+}
 table {
   &.jse-list-selection {
     border-bottom: 0px solid $jse_text;
@@ -197,6 +203,12 @@ table {
       }
     }
   }
+}
+tr.field-head {
+  translate: 18px;
+}
+tr.jse-bb {
+  translate: 18px;
 }
 tr.jse-bb > td {
   border-bottom: 1px solid #ccc;

@@ -51,6 +51,15 @@ class JSECNCT_WP_API {
                 'permission_callback' => array( $this, 'permissions' )
             )
         );
+        register_rest_route( 'jsecnct-api/v1', '/formidable',
+            array(
+                'methods'         => 'GET',
+                'callback'        => array( $this, 'get_formidable' ),
+                'args'            => array(
+                ),
+                'permission_callback' => array( $this, 'permissions' )
+           )
+        );
     }
 
     /**
@@ -113,14 +122,20 @@ class JSECNCT_WP_API {
         $form->wrappers = Forminator_API::get_form_wrappers($form->id);
         //file_put_contents("/tmp/jse-plugin.log", "FORM: ".json_encode($form, JSON_PRETTY_PRINT)."\n", FILE_APPEND | LOCK_EX);
       }
-
-      /*
-       * TODO: Multi-field processing for mapping. Technically we could use forminator's
-       * Forminator_API::get_form_wrapper()
-       */
-      $fields = Forminator_API::get_form_wrappers(5); //wrapper-1511347711918-1669
-      
-      //file_put_contents("/tmp/jse-plugin.log", "FORMINATOR: ".json_encode($response->forms)."\n", FILE_APPEND | LOCK_EX);
       return rest_ensure_response( $response );
     }
+
+  /**
+   * Return information about the formidable configuration in this wordpress so
+   * we can display a configuration to map forms to marketing lists.
+   * @param WP_REST_Request $request
+   */
+  public function get_formidable( WP_REST_Request $request ) {
+    $response = new StdClass();
+    $response->forms = FrmForm::get_published_forms();
+    foreach($response->forms as $form) {
+      $form->fields = FrmField::get_all_for_form($form->id);
+    }
+    return rest_ensure_response( $response );
+  }
 }

@@ -24,6 +24,13 @@ class JSECNCT_Settings {
       'plugin_test' => 'forminator/forminator.php',
       'class_test' => 'Forminator' // no namespace
     ],
+    'formidable' => [
+      'name' => 'Formidable',
+      'php_file' => 'classes/class-formidable-actions.php',
+      'php_type' => 'JSECNCT_Formidable_Actions',
+      'plugin_test' => 'formidable/formidable.php',
+      'class_test' => 'FrmFieldType' // no namespace
+    ],
     'woocommerce' => [
       'name' => 'WooCommerce',
       'php_file' => 'classes/class-woocommerce-actions.php',

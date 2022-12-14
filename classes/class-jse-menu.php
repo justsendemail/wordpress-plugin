@@ -112,4 +112,5 @@ class JSECNCT_Menu {
     public function render_woocommerce() { $this->render_page("woocommerce"); }
     public function render_amelia() { $this->render_page("amelia"); }
     public function render_forminator() { $this->render_page("forminator"); }
+    public function render_formidable() { $this->render_page("formidable"); }
 }

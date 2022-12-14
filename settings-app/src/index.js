@@ -10,6 +10,7 @@ import {API} from './client.js';
 
 import Dashboard from './dashboard';
 import ForminatorIntegration from './plugin-forminator';
+import FormidableIntegration from './plugin-formidable';
 import AmeliaIntegration from './plugin-amelia';
 import WooCommerceIntegration from './plugin-woocommerce';
 
@@ -40,14 +41,14 @@ function App({startPage, pagePrefix}) {
   const [lists, setLists] = useState([]);
   const [integrations, setIntegrations] = useState([]);
   const [settings, setSettings] = useState({connection: false});
- 
+
   useEffect(async () => {
-    if(settings.connection) {
+    if(promiseInProgress) return;
+    if(lists.length === 0 && settings.connection) {
       const lists = await API.jseClient('jse/lists',{key: settings.connection.apiKey});
       setLists(lists);
     }
-  },[settings])
-
+  },[settings]);
 
   const initialize = async () => {
     const _integrations = await API.wpClient('integrations');
@@ -59,7 +60,11 @@ function App({startPage, pagePrefix}) {
       else {
         if(!_integrations[ikey].available) _settings[ikey].active = false;
       }
-    }); 
+    });
+    if(_settings.connection) {
+      const lists = await API.jseClient('jse/lists',{key: _settings.connection.apiKey});
+      setLists(lists);
+    }
     setIntegrations(_integrations);
     setSettings(_settings);
     window.history.pushState({jseConnectPluginPage: startPage}, '');
@@ -117,7 +122,9 @@ function App({startPage, pagePrefix}) {
       case 'amelia':
         return 'Amelia';
       case 'forminator':
-        return 'Forminator Pro';
+        return 'Forminator Forms';
+      case 'formidable':
+        return 'Formidable Forms';
     }
     return 'Integrations';
   }
@@ -141,10 +148,10 @@ function App({startPage, pagePrefix}) {
       <div className="jse-connect-plugin jse-fade" style={{opacity}}>
 
           <div className="jse-header">
-            <img src="https://app.justsend.email/jse/favicon-32x32.png?jsecnct=1.0.0"></img>
+            <img src="https://app.justsend.email/jse/favicon-32x32.png?jsecnct=1.0.1"></img>
             <h1>JustSend.Email<span>&trade;</span> Connect</h1>
             <div className="jse-breadcrumb">
-              {page == 'dashboard' ? 
+              {page === 'dashboard' ?
               <span className="jse-first">Dashboard</span> 
               :
               <a style={{textDecoration: 'none'}} href={pageToUrl('dashboard')}>
@@ -169,6 +176,7 @@ function App({startPage, pagePrefix}) {
 
             {page === 'amelia' ? <AmeliaIntegration {...buildPageParams('amelia')} /> : ""}
             {page === 'forminator' ? <ForminatorIntegration {...buildPageParams('forminator')} /> : ""}
+            {page === 'formidable' ? <FormidableIntegration {...buildPageParams('formidable')} /> : ""}
             {page === 'woocommerce' ? <WooCommerceIntegration {...buildPageParams('woocommerce')} /> : ""}
 
             <div className="submit-area">
@@ -177,6 +185,11 @@ function App({startPage, pagePrefix}) {
 
           </form>}
 
+          <div className="jse-footer">
+            <div>&copy; Flawless Websites LLC 2022. All Rights Reserved.</div>
+            The JustSend.Email WordPress Connect plugin is free software; you can redistribute it and/or modify it under<br/>
+            the terms of the <b>GNU General Public License V3</b>, as published by the Free Software Foundation.
+          </div>
       </div>
     </>
   )

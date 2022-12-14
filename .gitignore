@@ -1,3 +1,5 @@
 .DS_Store
 js/*
 dev-setup.txt
+.idea
+release-2-svn.sh

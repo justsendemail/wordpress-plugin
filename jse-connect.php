@@ -4,16 +4,18 @@
  * @link              https://justsend.email/wordpress-plugin
  * @since             1.0.0
  * @package           JustSendEmail
+ * @copyright         2022 JustSend.Email
+ * @license           GPLv3
  *
  * @wordpress-plugin
  * Plugin Name:       JustSendEmail Connect
  * Plugin URI:        https://justsend.email/wordpress-plugin
  * Description:       A multi-plugin connector for JustSend.Email services
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Flawless Websites LLC
  * Author URI:        https://justsend.email
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           GPLv3
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       justsendemail-connect
  * Domain Path:       /languages
  */
@@ -28,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'JSECNCT_VERSION', '1.0.0' );
+define( 'JSECNCT_VERSION', '1.0.1' );
 include_once(ABSPATH.'wp-admin/includes/plugin.php');
 
 // ..... Production OAuth2 SSO for JustSend.Email ..... 
@@ -54,18 +56,18 @@ function jsecnct_file_error($error) {
 /**
  * The code that runs during plugin activation.
  */
-function jsecnct_activate_plugin() {
+function jsecnct__activate_plugin() {
 }
 
 /**
  * The code that runs during plugin deactivation.
  */
-function jsecnct_deactivate_plugin() {
+function jsecnct__deactivate_plugin() {
   /*JSECNCT_Settings::clear_settings();*/
 }
 
 register_activation_hook( __FILE__, 'jsecnct__activate_plugin' );
-register_deactivation_hook( __FILE__, 'jsecnct_deactivate_plugin' );
+register_deactivation_hook( __FILE__, 'jsecnct__deactivate_plugin' );
 
 require_once plugin_dir_path(__FILE__) . 'classes/class-jse-menu.php';
 require_once plugin_dir_path(__FILE__) . 'classes/class-jse-settings.php';
@@ -77,6 +79,7 @@ require_once plugin_dir_path(__FILE__) . 'classes/class-jse-connect-api.php';
 /* Dynamically Loaded If Plugin Detected */
 // require_once plugin_dir_path(__FILE__) . 'classes/class-ameliabooking-actions.php';
 // require_once plugin_dir_path(__FILE__) . 'classes/class-forminator-actions.php';
+// require_once plugin_dir_path(__FILE__) . 'classes/class-formidable-actions.php';
 // require_once plugin_dir_path(__FILE__) . 'classes/class-woocommerce-actions.php';
 
 

@@ -23,7 +23,7 @@ const Dashboard = ({integrations, settings, lists, saveSettings, toggleActive, n
   }
 
   const processMessage = async (e) => {
-    if(e.origin == __JSECNCT.api.appUrl) {
+    if(e.origin === __JSECNCT.api.appUrl) {
       const connection = await API.jseClient('jse/connect', {token: e.data, body: {name: `WordPress: ${__JSECNCT.api.siteUrl}`}});
       //console.log("New Settings:", {...settings, connection});
       trackPromise(saveSettings({...settings, connection}));

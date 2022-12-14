@@ -40,7 +40,7 @@ class JSECNCT_Forminator_Actions {
     $api = new JSECNCT_Rest_API(JSECNCT_API_URL, $this->conn['apiKey']);
 
     $form_data = json_decode(json_encode($field_data_array), true);
-    $raw_fields = $this->build_jse_fields($form_data);
+    $raw_fields = $this->build_raw_form_fields($form_data);
     $mapping = $this->conf['mapping'][$form_id];
 
     jsecnct_file_debug("ForminatorAction(raw_fields)", $raw_fields);
@@ -73,7 +73,13 @@ class JSECNCT_Forminator_Actions {
 
   }
 
-  public function build_jse_fields($form_data) {
+  /**
+   * Results in fieldSlug --> fieldValue
+   *
+   * @param $form_data
+   * @return array
+   */
+  public function build_raw_form_fields($form_data) {
 
     $fields = array();
 
@@ -97,10 +103,11 @@ class JSECNCT_Forminator_Actions {
               $field_value = $v;
             } else {
               $sep = preg_match('/checkbox/i', $field_name) ? "|" : " ";
+              $values = [];
               foreach($v as $pk => $pv) {
-               $field_value .= $pv.$sep;
+               $values[] = $pv;
               }
-              $field_value = trim($field_value);
+              $field_value = join($sep, $values);
             }
           }
           $fields[$field_name] = $field_value;

@@ -50,7 +50,7 @@ const AmeliaIntegration = ({available, settings, updateSettings, lists}) => {
   }
 
   const updateResTypeList = (resType, listId) => {
-    console.log("Selected ResType: "+resType+" And ListID: "+listId);
+    //console.log("Selected ResType: "+resType+" And ListID: "+listId);
     let newMapping;
     if(listId == 0) {
       const {[resType]: removed, ...other} = mapping;
@@ -69,7 +69,7 @@ const AmeliaIntegration = ({available, settings, updateSettings, lists}) => {
   }
 
   const updateResTypeMapping = (resType, fieldKey, fieldName) => {
-    console.log("Map "+resType+" key: "+fieldKey+" field: "+fieldName);
+    //console.log("Map "+resType+" key: "+fieldKey+" field: "+fieldName);
     const _fmap = mapping[resType].fmap;
     if(fieldName == 0)
       delete _fmap[fieldKey];
