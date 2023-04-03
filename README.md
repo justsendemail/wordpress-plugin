@@ -4,8 +4,8 @@ Contributors: anthonyjse\
 Donate link: https://justsend.email \
 Tags: email, marketing, plugin, woocommerce, ameila, forminator \
 Requires at least: 5.6.1 \
-Tested up to: 6.0 \
-Stable tag: 1.0.0 \
+Tested up to: 6.11 \
+Stable tag: 1.0.1 \
 Requires PHP: 7.0 \
 License: GPLv2 \
 License URI: https://www.gnu.org/licenses/gpl-2.0.html 
@@ -19,12 +19,14 @@ The JustSend.Email WordPress Plugin makes it super-easy to move data from leadin
 These WordPress plugins are currently supported:
 
 * Ameila Booking
+* Formidable Forms
 * Forminator Forms
 * WooCommerce
 
 ### What you can do with JustSend.Email + WordPress 
 
 * Add a client to a JustSend.Email list when an appointment is Booked in AmeilaBooking.
+* Add a person to a JustSend.Email list when the submit a formidable form.
 * Add a visitor to a JustSend.Email list when they submit a forminator form.
 * Add a customer to a JustSend.Email list when a they complete a WooComerce order.
 
@@ -41,6 +43,8 @@ These WordPress plugins are currently supported:
 The JustSend.Email Wordpress plugin connects to a JustSend.Email account using industry standard OAuth2 authorization. When the "Connect" button is pressed on the plugin settings page, a new browser window opens and prompts the user to enter their JustSend.Email account login credentials. The login request can be verified and authenticated by checking and confirming that **login.justsend.email** is the domain in the browser window.
 
 For technical details on the JustSend.Email API visit the [API Documentation](https://justsend.email/api-documentation/) page.
+
+Be sure to refer to our [Terms of Use](https://justsend.email/terms) and [Privacy Policy](https://justsend.email/privacy) for further details.
 
 ## Frequently Asked Questions
  
@@ -62,10 +66,16 @@ Contact us here: https://justsend.email/contact
 
 ### Changelog
 
-= 1.0.0 =
+#### 1.0.1 
+* Added support for Formidable WordPress plugin.
+
+#### 1.0.0
 * First release of the JustSend.Email Connect plugin with support for these other WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.
 
 ### Upgrade Notice
 
-= 1.0.0 =
+#### 1.0.1
+* Adding support for Formidable WordPress plugin.
+
+#### 1.0.0
 * First release of the JustSend.Email Connect plugin with support for these other WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.
