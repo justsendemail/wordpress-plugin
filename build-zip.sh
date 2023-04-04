@@ -26,8 +26,10 @@ zip -r just-send-email-connect-$1.zip $src_dir/ \
   -x '*/settings-app/*-lock*' \
   -x '*/settings-app/dist/*' \
   -x '*/settings-app/data/*' \
+  -x '*/settings-app/.idea/*' \
   -x '*/.gitignore' \
   -x '*/.git/*' \
+  -x '.idea/*' \
   -x '*build-zip.sh*' \
   -x '*dev-setup.txt*'
 

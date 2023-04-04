@@ -21,7 +21,9 @@ const WooCommerceIntegration = ({available, settings, updateSettings, lists}) =>
         {key: "lastName", name: "Last Name"},
         {key: "company", name: "Company"},
         {key: "phone", name: "Phone Number"},
-        {key: "total", name: "Order Total"}
+        {key: "total", name: "Last Order Total"},
+        {key: "lastOrderDate", name: "Last Order Date"},
+        {key: "productSkus", name: "Product SKUs"}
       ]
     }
   ]);

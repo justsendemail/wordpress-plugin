@@ -68,6 +68,7 @@ Contact us here: https://justsend.email/contact
 
 #### 1.0.1 
 * Added support for Formidable WordPress plugin.
+* Adding support for 'Last Order Date' and 'Product SKUs' for Woocommerce.
 
 #### 1.0.0
 * First release of the JustSend.Email Connect plugin with support for these other WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.
@@ -76,6 +77,7 @@ Contact us here: https://justsend.email/contact
 
 #### 1.0.1
 * Adding support for Formidable WordPress plugin.
+* Adding support for 'Last Order Date' and 'Product SKUs' for Woocommerce.
 
 #### 1.0.0
 * First release of the JustSend.Email Connect plugin with support for these other WordPress plugins: Amelia Bookings & Events, Forminator Forms, and WooCommerce.

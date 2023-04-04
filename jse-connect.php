@@ -4,7 +4,7 @@
  * @link              https://justsend.email/wordpress-plugin
  * @since             1.0.0
  * @package           JustSendEmail
- * @copyright         2022 JustSend.Email
+ * @copyright         2023 JustSend.Email
  * @license           GPLv3
  *
  * @wordpress-plugin

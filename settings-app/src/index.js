@@ -186,7 +186,7 @@ function App({startPage, pagePrefix}) {
           </form>}
 
           <div className="jse-footer">
-            <div>&copy; Flawless Websites LLC 2022. All Rights Reserved.</div>
+            <div>&copy; Flawless Websites LLC 2023. All Rights Reserved.</div>
             The JustSend.Email WordPress Connect plugin is free software; you can redistribute it and/or modify it under<br/>
             the terms of the <b>GNU General Public License V3</b>, as published by the Free Software Foundation.
           </div>
