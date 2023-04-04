@@ -4,7 +4,7 @@ Contributors: anthonyjse\
 Donate link: https://justsend.email \
 Tags: email, marketing, plugin, woocommerce, ameila, forminator \
 Requires at least: 5.6.1 \
-Tested up to: 6.11 \
+Tested up to: 6.2 \
 Stable tag: 1.0.1 \
 Requires PHP: 7.0 \
 License: GPLv2 \
